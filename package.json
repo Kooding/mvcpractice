@@ -1,0 +1,13 @@
+{
+  "name": "js-mvc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "devkoo",
+  "license": "MIT",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "start": "lite-server"
+  }
+}
