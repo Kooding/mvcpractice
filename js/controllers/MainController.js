@@ -1,5 +1,6 @@
 import FormView from '../views/FormView.js';
 import ResultView from '../views/ResultView.js';
+import TabView from '../views/TabView.js';
 import SearchModel from '../models/SearchModel.js';
 const tag = '[MainController]';
 
@@ -10,6 +11,17 @@ export default {
       .on('@reset', (e) => this.onResetForm());
 
     ResultView.setup(document.querySelector('#search-result'));
+
+    TabView.setup(document.querySelector('.tabs')).on('@click', (e) =>
+      this.onChangeTab(e.detail.tabName)
+    );
+
+    this.renderView();
+  },
+
+  renderView() {
+    TabView.setActiveTab('추천 검색어');
+    ResultView.hide();
   },
 
   search(query) {
@@ -28,5 +40,8 @@ export default {
 
   onSearchResult(data) {
     ResultView.render(data);
+  },
+  onChangeTab(tabName) {
+    debugger;
   },
 };
