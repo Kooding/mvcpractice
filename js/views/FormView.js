@@ -27,11 +27,12 @@ FormView.bindEvents = function () {
 FormView.onKeyup = function (e) {
   const ENTER_KEY = 13;
   this.showResetBtn(this.inputEl.value.length === 0 ? false : true);
+  if (this.inputEl.value === '') this.emit('@reset');
   if (e.keyCode !== ENTER_KEY) return;
   this.emit('@submit', { input: this.inputEl.value });
 };
 
 FormView.onClickReset = function (e) {
-  this.showResetBtn(false);
   this.emit('@reset');
+  this.showResetBtn(false);
 };

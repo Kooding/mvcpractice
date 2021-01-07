@@ -9,14 +9,14 @@ const data = [
     name: '[키친르쎌] 이탈리아 파티 세트 3~4인분',
     image: 'https://placeimg.com/300/300/foods',
   },
-]
+];
 
 export default {
   list(query) {
     return new Promise((res) => {
       setTimeout(() => {
-        res(data)
-      }, 200)
-    })
+        res(data);
+      }, 200);
+    });
   },
-}
+};
