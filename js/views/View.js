@@ -20,6 +20,7 @@ export default {
 
   hide() {
     this.el.style.display = 'none';
+    return this;
   },
 
   show() {

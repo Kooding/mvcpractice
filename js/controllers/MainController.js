@@ -5,7 +5,6 @@ const tag = '[MainController]';
 
 export default {
   init() {
-    console.log(tag, 'init()');
     FormView.setup(document.querySelector('form'))
       .on('@submit', (e) => this.onSubmit(e.detail.input))
       .on('@reset', (e) => this.onResetForm());
@@ -20,12 +19,11 @@ export default {
   },
 
   onSubmit(inputValue) {
-    console.log(inputValue);
     this.search(inputValue);
   },
 
   onResetForm() {
-    console.log(tag, 'onResetForm');
+    ResultView.hide();
   },
 
   onSearchResult(data) {

@@ -1,4 +1,3 @@
-import FormView from './FormView.js';
 import View from './View.js';
 
 const tag = '[ResultView]';
@@ -32,4 +31,5 @@ ResultView.getSearchItemHtml = function (item) {
     <p>${item.name}</p>
   </li>`;
 };
+
 export default ResultView;
