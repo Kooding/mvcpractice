@@ -18,7 +18,11 @@ export default {
       this.remove(keyword)
     }
 
-    const date = '12.31'
+    // const date = '12.31'
+    const date = new Date()
+      .toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric' })
+      .slice(0, -1)
+
     this.data = [...this.data, { keyword, date }]
   },
 
